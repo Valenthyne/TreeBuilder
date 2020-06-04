@@ -26,6 +26,7 @@ namespace TreeBuilder
 			{
 				printMenu();
 				char sel = Console.ReadKey().KeyChar;
+				Console.WriteLine("\n");
 
 				switch (sel)
 				{
@@ -40,7 +41,7 @@ namespace TreeBuilder
 				}
 			}
 
-			Console.WriteLine("\nThank you for using TreeBuilder!");
+			Console.WriteLine("\n\nThank you for using TreeBuilder!");
 			Console.ReadKey();
 		}
 
@@ -51,7 +52,7 @@ namespace TreeBuilder
 			Console.WriteLine("   [2]: Branching");
 			Console.WriteLine("   [3]: Generation");
 			Console.WriteLine("   [4]: Exit");
-			Console.WriteLine("\nSelect : ");
+			Console.Write("\nSelect : ");
 		}
 
 		static void navMenu()
