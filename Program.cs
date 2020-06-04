@@ -98,6 +98,16 @@ namespace TreeBuilder
 						}
 						break;
 					case '2':
+						String modifiedPath = GoBack(Path.path);
+						if (Directory.Exists(modifiedPath))
+						{
+							Path.path = modifiedPath;
+							Console.WriteLine("New path: " + Path.path);
+						}
+						else
+						{
+							Console.WriteLine("Directory does not exist.");
+						}
 						break;
 					case '3':
 						break;
@@ -107,6 +117,23 @@ namespace TreeBuilder
 						stay = false;
 						break;
 				}
+			}
+		}
+
+		// "Safe" algorithm credited to Ivan Stoev (https://stackoverflow.com/a/34414057)
+		static String GoBack(String path)
+		{
+			String root = "C:\\";
+
+			int lIndex = path.LastIndexOf("\\");
+			int stlIdex = lIndex > 0 ? path.LastIndexOf("\\", lIndex - 1) : -1;
+			if (stlIdex >= 0)
+			{
+				return path.Substring(0, stlIdex);
+			}
+			else
+			{
+				return root;
 			}
 		}
 
