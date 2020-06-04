@@ -25,6 +25,19 @@ namespace TreeBuilder
 			while (stay)
 			{
 				printMenu();
+				char sel = Console.ReadKey().KeyChar;
+
+				switch (sel)
+				{
+					case '1': navMenu();
+						break;
+					case '2': branchMenu();
+						break;
+					case '3': genMenu();
+						break;
+					default: stay = false;
+						break;
+				}
 			}
 
 			Console.WriteLine("\nThank you for using TreeBuilder!");
@@ -39,6 +52,21 @@ namespace TreeBuilder
 			Console.WriteLine("   [3]: Generation");
 			Console.WriteLine("   [4]: Exit");
 			Console.WriteLine("\nSelect : ");
+		}
+
+		static void navMenu()
+		{
+
+		}
+
+		static void branchMenu()
+		{
+
+		}
+
+		static void genMenu()
+		{
+
 		}
 	}
 }
