@@ -12,16 +12,20 @@ using System.Runtime.CompilerServices;
 
 namespace TreeBuilder
 {
+	static class Path
+	{
+		public static String path;
+	}
+
 	class Program
 	{
-		// Variables
-		String path = "C:\\";
-
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Welcome to TreeBuilder!\n");
 
 			bool stay = true;
+
+			Path.path = "Hello!";
 
 			while (stay)
 			{
@@ -64,6 +68,7 @@ namespace TreeBuilder
 			while (stay)
 			{
 				Console.WriteLine("\n       Navigation Menu\n");
+				Console.WriteLine("Current Path: " + Path.path + "\n");
 				Console.WriteLine("   [1]: Change Directory");
 				Console.WriteLine("   [2]: Previous Directory");
 				Console.WriteLine("   [3]: Drive Selection");
