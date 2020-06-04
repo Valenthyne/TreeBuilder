@@ -21,7 +21,7 @@ namespace TreeBuilder
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Welcome to TreeBuilder!\n");
+			Console.WriteLine("Welcome to TreeBuilder!");
 
 			bool stay = true;
 
@@ -82,7 +82,7 @@ namespace TreeBuilder
 
 				switch (sel)
 				{
-					case '1':
+					case '1': // Changing the directory from current path
 						Console.Write("Enter destination: ");
 						String dest = Console.ReadLine();
 						String dir = Path.path + dest;
@@ -97,7 +97,7 @@ namespace TreeBuilder
 						Console.WriteLine("Directory '" + dir + "' does not exist.");
 						}
 						break;
-					case '2':
+					case '2': // Moving "back" a directory from current path
 						String modifiedPath = GoBack(Path.path);
 						if (Directory.Exists(modifiedPath))
 						{
@@ -109,7 +109,7 @@ namespace TreeBuilder
 							Console.WriteLine("Directory does not exist.");
 						}
 						break;
-					case '3':
+					case '3': // Change to the root directory of a certain drive
 						Console.Write("Enter preferred drive (letter only): ");
 						String drive = Console.ReadLine() + ":\\";
 						if (Directory.Exists(drive))
@@ -117,11 +117,17 @@ namespace TreeBuilder
 						else
 							Console.WriteLine("Drive does not exist or is unavailable.");
 						break;
-					case '4':
+					case '4': // Print all directories present within the current path
 						String[] directories = Directory.GetDirectories(Path.path);
-						foreach (String s in directories)
+						if (directories.Length != 0) 
+						{ 
+							foreach (String s in directories)
+							{
+								Console.WriteLine(s);
+							}
+						}  else
 						{
-							Console.WriteLine(s);
+							Console.WriteLine("No sub-directories present.");
 						}
 						break;
 					default:
