@@ -25,17 +25,17 @@ namespace TreeBuilder
 
 			while (stay)
 			{
-				mainMenu();
+				MainMenu();
 				char sel = Console.ReadKey().KeyChar;
 				Console.WriteLine("\n");
 
 				switch (sel)
 				{
-					case '1': navMenu();
+					case '1': NavMenu();
 						break;
-					case '2': branchMenu();
+					case '2': BranchMenu();
 						break;
-					case '3': genMenu();
+					case '3': GenMenu();
 						break;
 					default: stay = false;
 						break;
@@ -47,7 +47,7 @@ namespace TreeBuilder
 		}
 
 		// Method to print the menu for user input
-		static void mainMenu()
+		static void MainMenu()
 		{
 			Console.WriteLine("Main Menu\n");
 			Console.WriteLine("   [1]: Navigation");
@@ -57,7 +57,7 @@ namespace TreeBuilder
 			Console.Write("\nSelect : ");
 		}
 
-		static void navMenu()
+		static void NavMenu()
 		{
 			bool stay = true;
 
@@ -91,7 +91,7 @@ namespace TreeBuilder
 			}
 		}
 
-		static void branchMenu()
+		static void BranchMenu()
 		{
 			bool stay = true;
 
@@ -122,7 +122,7 @@ namespace TreeBuilder
 			}
 		}
 
-		static void genMenu()
+		static void GenMenu()
 		{
 			bool stay = true;
 
