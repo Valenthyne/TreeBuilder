@@ -110,6 +110,12 @@ namespace TreeBuilder
 						}
 						break;
 					case '3':
+						Console.Write("Enter preferred drive (letter only): ");
+						String drive = Console.ReadLine() + ":\\";
+						if (Directory.Exists(drive))
+							Path.path = drive;
+						else
+							Console.WriteLine("Drive does not exist or is unavailable.");
 						break;
 					case '4':
 						break;
