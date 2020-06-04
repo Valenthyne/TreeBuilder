@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.CompilerServices;
 
 /*
  * TreeBuilder: A console app that will allow users to design
@@ -7,14 +8,14 @@ using System.IO;
  * path. Largely based from code in a Java version from 2018.
  * 
  * Authored by Valenthyne, June 4 2020 - undetermined
- */ 
+ */
 
 namespace TreeBuilder
 {
 	class Program
 	{
 		// Variables
-		String driveLetter = "C:\\";
+		String path = "C:\\";
 
 		static void Main(string[] args)
 		{
@@ -24,7 +25,7 @@ namespace TreeBuilder
 
 			while (stay)
 			{
-				printMenu();
+				mainMenu();
 				char sel = Console.ReadKey().KeyChar;
 				Console.WriteLine("\n");
 
@@ -41,13 +42,14 @@ namespace TreeBuilder
 				}
 			}
 
-			Console.WriteLine("\n\nThank you for using TreeBuilder!");
+			Console.WriteLine("Thank you for using TreeBuilder!");
 			Console.ReadKey();
 		}
 
 		// Method to print the menu for user input
-		static void printMenu()
+		static void mainMenu()
 		{
+			Console.WriteLine("Main Menu\n");
 			Console.WriteLine("   [1]: Navigation");
 			Console.WriteLine("   [2]: Branching");
 			Console.WriteLine("   [3]: Generation");
@@ -57,17 +59,98 @@ namespace TreeBuilder
 
 		static void navMenu()
 		{
+			bool stay = true;
 
+			while (stay)
+			{
+				Console.WriteLine("Navigation Menu\n");
+				Console.WriteLine("   [1]: Change Directory");
+				Console.WriteLine("   [2]: Previous Directory");
+				Console.WriteLine("   [3]: Drive Selection");
+				Console.WriteLine("   [4]: Print Contents");
+				Console.WriteLine("   [5]: Return");
+				Console.Write("\nSelect : ");
+
+				char sel = Console.ReadKey().KeyChar;
+				Console.WriteLine("\n");
+
+				switch (sel)
+				{
+					case '1':
+						break;
+					case '2':
+						break;
+					case '3':
+						break;
+					case '4':
+						break;
+					default:
+						stay = false;
+						break;
+				}
+			}
 		}
 
 		static void branchMenu()
 		{
+			bool stay = true;
 
+			while (stay)
+			{
+				Console.WriteLine("Branch Menu\n");
+				Console.WriteLine("   [1]: Design Branch");
+				Console.WriteLine("   [2]: View Branch");
+				Console.WriteLine("   [3]: Clear Branch");
+				Console.WriteLine("   [4]: Return");
+				Console.Write("\nSelect : ");
+
+				char sel = Console.ReadKey().KeyChar;
+				Console.WriteLine("\n");
+
+				switch (sel)
+				{
+					case '1':
+						break;
+					case '2':
+						break;
+					case '3':
+						break;
+					default:
+						stay = false;
+						break;
+				}
+			}
 		}
 
 		static void genMenu()
 		{
+			bool stay = true;
 
+			while (stay)
+			{
+				Console.WriteLine("Generate Menu\n");
+				Console.WriteLine("   [1]: Create Directories");
+				Console.WriteLine("   [2]: Generate Branch");
+				Console.WriteLine("   [3]: Unload Branch");
+				Console.WriteLine("   [4]: Return");
+				Console.Write("\nSelect : ");
+
+				char sel = Console.ReadKey().KeyChar;
+				Console.WriteLine("\n");
+
+				switch (sel)
+				{
+					case '1':
+						break;
+					case '2':
+						break;
+					case '3':
+						break;
+					default:
+						stay = false;
+						break;
+				}
+			}
 		}
 	}
 }
