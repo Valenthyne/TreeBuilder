@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eICH4MbDOkVzo+vZl6pkBa/PBHaC/KPtcRBhAXk/rnTNMyWUI6W99wlfixq2rEt+YXYtLhlDjprYftcxwlvqAQ==",
+  "success": true,
+  "projectFilePath": "C:\\Code\\TreeBuilder\\TreeBuilder\\TreeBuilder.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Drachy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
