@@ -118,6 +118,11 @@ namespace TreeBuilder
 							Console.WriteLine("Drive does not exist or is unavailable.");
 						break;
 					case '4':
+						String[] directories = Directory.GetDirectories(Path.path);
+						foreach (String s in directories)
+						{
+							Console.WriteLine(s);
+						}
 						break;
 					default:
 						stay = false;
