@@ -49,7 +49,7 @@ namespace TreeBuilder
 		// Method to print the menu for user input
 		static void MainMenu()
 		{
-			Console.WriteLine("Main Menu\n");
+			Console.WriteLine("\n       Main Menu\n");
 			Console.WriteLine("   [1]: Navigation");
 			Console.WriteLine("   [2]: Branching");
 			Console.WriteLine("   [3]: Generation");
@@ -63,7 +63,7 @@ namespace TreeBuilder
 
 			while (stay)
 			{
-				Console.WriteLine("Navigation Menu\n");
+				Console.WriteLine("\n       Navigation Menu\n");
 				Console.WriteLine("   [1]: Change Directory");
 				Console.WriteLine("   [2]: Previous Directory");
 				Console.WriteLine("   [3]: Drive Selection");
@@ -97,7 +97,7 @@ namespace TreeBuilder
 
 			while (stay)
 			{
-				Console.WriteLine("Branch Menu\n");
+				Console.WriteLine("\n       Branch Menu\n");
 				Console.WriteLine("   [1]: Design Branch");
 				Console.WriteLine("   [2]: View Branch");
 				Console.WriteLine("   [3]: Clear Branch");
@@ -128,7 +128,7 @@ namespace TreeBuilder
 
 			while (stay)
 			{
-				Console.WriteLine("Generate Menu\n");
+				Console.WriteLine("\n       Generate Menu\n");
 				Console.WriteLine("   [1]: Create Directories");
 				Console.WriteLine("   [2]: Generate Branch");
 				Console.WriteLine("   [3]: Unload Branch");
