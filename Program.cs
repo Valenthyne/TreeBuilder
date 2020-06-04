@@ -25,7 +25,8 @@ namespace TreeBuilder
 
 			bool stay = true;
 
-			Path.path = "Hello!";
+			// Set the default path to C drive
+			Path.path = "C:\\";
 
 			while (stay)
 			{
@@ -82,6 +83,19 @@ namespace TreeBuilder
 				switch (sel)
 				{
 					case '1':
+						Console.Write("Enter destination: ");
+						String dest = Console.ReadLine();
+						String dir = Path.path + dest;
+						
+						if (Directory.Exists(dir))
+						{
+							Path.path = dir + "\\";
+							Console.WriteLine("New path: " + Path.path);
+						}
+						else
+						{ 
+						Console.WriteLine("Directory '" + dir + "' does not exist.");
+						}
 						break;
 					case '2':
 						break;
